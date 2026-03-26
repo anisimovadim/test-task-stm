@@ -8,7 +8,7 @@ interface Props {
 
 export const UserTable = ({ users }: Props) => {
     if (!users.length) {
-        return <div>No users found</div>;
+        return <div>Пользователи не найдены</div>;
     }
 
     return (

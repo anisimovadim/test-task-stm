@@ -10,19 +10,21 @@ function App() {
     const [loading, setLoading] = useState(true);
     const [filter, setFilter] = useState('');
 
+    // Предзагрузка изображений
     const preloadImages = (users: User[]) => {
         return Promise.all(
             users.map(user =>
                 new Promise<void>(resolve => {
                     const img = new Image();
                     img.src = user.picture.thumbnail;
-                    img.onload = resolve;
-                    img.onerror = resolve;
+                    img.onload = () => resolve();
+                    img.onerror = () => resolve();
                 })
             )
         );
     };
 
+    // Получение пользователей
     useEffect(() => {
         const loadData = async () => {
             try {
@@ -40,14 +42,15 @@ function App() {
         loadData();
     }, []);
 
+    // Функции фильтрации пользователей
     const handleFilter = (value: string) => setFilter(value);
     const handleReset = () => setFilter('');
-
     const filteredUsers = users.filter(user => {
         const fullName = normalize(`${user.name.first} ${user.name.last}`);
         return fullName.includes(normalize(filter));
     });
 
+    // Лоадер
     if (loading) {
         return <Loader />;
     }
@@ -56,7 +59,7 @@ function App() {
         <div className="app-container">
             <h1 className="app-title">Пользователи</h1>
             <Filter onChange={handleFilter} onReset={handleReset} />
-            <UserTable users={filteredUsers} className="fade-in" />
+            <UserTable users={filteredUsers} />
         </div>
     );
 }
