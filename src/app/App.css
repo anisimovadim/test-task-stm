@@ -1,0 +1,11 @@
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
