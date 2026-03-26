@@ -4,7 +4,7 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone <ссылка>
+git clone https://github.com/anisimovadim/test-task-stm.git
 ```
 
 2. Перейдите в папку проекта:
