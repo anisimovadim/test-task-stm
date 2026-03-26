@@ -10,7 +10,6 @@ export const UserTable = ({ users }: Props) => {
     if (!users.length) {
         return <div>Пользователи не найдены</div>;
     }
-
     return (
         <table className="user-table" border={1} cellPadding={8}>
             <thead>

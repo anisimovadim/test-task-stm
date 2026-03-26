@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import { debounce } from '../hooks/useDebounce';
-
 interface Props {
     onChange: (value: string) => void;
     onReset: () => void;

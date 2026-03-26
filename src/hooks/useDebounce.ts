@@ -7,6 +7,7 @@
  *
  * @returns новая функция с теми же аргументами, но с отложенным вызовом
  */
+
 export function debounce<T extends (...args: any[]) => void>(
     fn: T,
     delay: number

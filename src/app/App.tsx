@@ -54,7 +54,6 @@ function App() {
     if (loading) {
         return <Loader />;
     }
-
     return (
         <div className="app-container">
             <h1 className="app-title">Пользователи</h1>
