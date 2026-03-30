@@ -1,11 +1,22 @@
 .app-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: clamp(1rem, 3vw, 2rem);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: #333;
+    line-height: 1.5;
 }
 
-.app-container h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
+.app-header {
+    margin-bottom: 2rem;
+}
+
+.app-title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
 }

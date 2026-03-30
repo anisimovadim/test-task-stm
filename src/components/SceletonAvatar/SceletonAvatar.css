@@ -1,0 +1,42 @@
+.avatar-wrapper {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.avatar-skeleton {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+.avatar-skeleton.error-bg {
+    background: #ffebee;
+    animation: none;
+    display: flex; justify-content: center; align-items: center;
+}
+
+.error-icon {
+    color: #ef5350; font-weight: bold; font-size: 1.2rem;
+}
+
+.avatar-image {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Плавное появление */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.avatar-image.visible { opacity: 1; }
+.avatar-image.hidden { opacity: 0; }
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}

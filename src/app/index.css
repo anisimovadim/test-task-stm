@@ -1,5 +1,6 @@
 @import './App.css';
-@import './Filter.css';
-@import './Loader.css';
-@import './TooltipImage.css';
-@import './UserTable.css';
+@import '../components/Filter/Filter.css';
+@import '../components/Loader/Loader.css';
+@import '../components/TooltipImage/TooltipImage.css';
+@import '../components/UserTable/UserTable.css';
+@import '../components/SceletonAvatar/SceletonAvatar.css';

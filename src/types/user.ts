@@ -4,6 +4,9 @@ export interface User {
         last: string;
     };
     email: string;
+    login: {
+        uuid: string;
+    };
     phone: string;
     location: {
         state: string;
