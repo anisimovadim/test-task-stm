@@ -10,7 +10,7 @@ function App() {
     const [users, setUsers] = useState<User[]>([]);
     const [loading, setLoading] = useState(true);
     const [filter, setFilter] = useState('');
-    const debouncedFilter = useDebounce(filter, 300); // Наш хук
+    const debouncedFilter = useDebounce(filter, 300);
 
     useEffect(() => {
         const loadData = async () => {
