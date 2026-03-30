@@ -12,6 +12,7 @@ function App() {
     const [filter, setFilter] = useState('');
     const debouncedFilter = useDebounce(filter, 300);
 
+    // Загрузка пользователей
     useEffect(() => {
         const loadData = async () => {
             try {
@@ -28,6 +29,7 @@ function App() {
         loadData();
     }, []);
 
+    // Фильтруем пользователей по имени
     const filteredUsers = useMemo(() => {
         const searchStr = normalize(debouncedFilter);
         if (!searchStr) return users;
